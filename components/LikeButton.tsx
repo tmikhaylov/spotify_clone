@@ -24,7 +24,7 @@ const LikeButton: React.FC<LikeButtonProps> = ({
     const [isLiked, setIsLiked] = useState(false);
 
     useEffect(() => {
-        if (!user.id) {
+        if (!user || !user.id) {
             return;
         }
 
